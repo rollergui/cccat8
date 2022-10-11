@@ -14,6 +14,8 @@ export default class Order {
   }
 
   addItem(item: Item, quantity: number) {
+    if (quantity < 0) throw new Error("Quantidade inválida");
+    if (this.orderItems.some(orderItem => orderItem.idItem === item.idItem)) return;
     this.orderItems.push(new OrderItem(item.idItem, item.price, quantity));
   }
 
