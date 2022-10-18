@@ -1,4 +1,4 @@
-import Cpf from "../src/Cpf";
+import Cpf from "../../src/domain/entity/Cpf";
 
 test("Deve validar o cpf válido que tem digito != 0", function () {
   const cpf = new Cpf("402.636.770-36");
